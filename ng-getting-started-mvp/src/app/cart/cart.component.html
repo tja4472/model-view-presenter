@@ -1,0 +1,10 @@
+<h3>Cart</h3>
+
+<p>
+  <a [routerLink]="shippingPath">Shipping Prices</a>
+</p>
+
+<app-cart-item *ngFor="let item of items"
+  [item]="item"></app-cart-item>
+
+<app-checkout (checkout)="checkout.emit($event)"></app-checkout>
